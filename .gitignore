@@ -1,2 +1,5 @@
 .venv/
 .DS_Store
+*.dump
+logs/
+lancer_lab.sh

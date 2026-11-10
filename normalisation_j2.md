@@ -69,12 +69,12 @@ ETAPE 7.1 · MESURER AVANT DE COPIER
 
 volume.sql : INSERT 0 47520 (11 ruches x 90 jours x 48 mesures).
 Tableau de bord SN-CASA : 144 mesures par jour (3 ruches x 48 dans notre base ; le sujet en compte 4).
-Execution Time sur les tables : ___ ms
+Execution Time sur les tables : 11,003 ms
 
 ETAPE 7.2 · LA SYNTHESE ET SON PRIX
 
 Memes chiffres dans synthese_site_jour.
-Execution Time dans la vue materialisee : ___ ms
+Execution Time dans la vue materialisee : 0,024 ms, soit environ 450 fois plus rapide
 
 Vol simule le 15 mars a 6 h sur SN-CASA-014 (8,40 kg) : la synthese ne montre rien avant le REFRESH, puis 2027-03-15 | 1 mesure | poids_min = 8.40.
 Si la vue n'est rafraichie que la nuit, le vol reste invisible jusqu'a 24 heures, le temps pour le voleur de partir loin.
@@ -82,7 +82,7 @@ Un vol se detecte donc dans les mesures brutes, au fil de l'eau (une alerte calc
 
 ETAPE 7.3 · L'EXPORT POUR LE BAILLEUR
 
-Casser le hache simple du +221 77 100 00 02 : retrouve en ___ s. Il ne reste qu'un million de possibilites une fois le debut connu : un sha256 sans cle n'est pas un pseudonyme.
+Casser le hache simple du +221 77 100 00 02 : retrouve en 2,07 s. Il ne reste qu'un million de possibilites une fois le debut connu : un sha256 sans cle n'est pas un pseudonyme.
 
 v_export_bailleur : 8 lignes pour 11 ruches, sans nom ni telephone, positions arrondies (12.6 | -16.3). La verification de la cle dans la definition de la vue renvoie f.
 

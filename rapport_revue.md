@@ -44,7 +44,7 @@ C12 · la base se reconstruit avec nos fichiers : base vide, jour 1 puis les hui
 
 R1 · C9 · Gravite basse
 Constat : query_vuln.py (jour 1) et recherche_vuln.py construisent leur requete avec +.
-Preuve : git grep -n '" +' -- '*.py' -> query_vuln.py et recherche_vuln.py.
+Preuve : git grep -n -E '" \+|f"' -- '*.py' -> query_vuln.py ligne 6 (requete SQL concatenee) et recherche_vuln.py (tri concatene). course_jeton.py et course_jeton_corrige.py ressortent aussi, mais ils ne concatenent qu'un message d'affichage, pas une requete : faux positif, explique.
 Correction : ce sont des demonstrations volontaires, signalees en tete de fichier (VOLONTAIREMENT vulnerable). Les versions utilisees sont query.py et recherche.py. A retirer d'un depot de production.
 Retest : les versions corrigees n'ont aucune concatenation.
 

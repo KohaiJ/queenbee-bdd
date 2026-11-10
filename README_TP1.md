@@ -11,7 +11,6 @@ Definir l utilisateur, le mot de passe et l hote avec export PGUSER=postgres PGP
 
 Lab 1 Modele entite association
 Lire annotations.md pour les entites, les liens, les hypotheses et les menaces
-Ouvrir mcd.drawio dans draw.io pour voir le MCD
 mcd.png est l image du MCD
 
 Lab 2 Modele relationnel
